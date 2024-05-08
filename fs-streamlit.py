@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image  # Pillow: https://pillow.readthedocs.io/en/stable/index.html
 from os import path
 
-uploaded_file = st.file_uploader("Choose a file")
+uploaded_file = st.file_uploader("Choose a file") # https://docs.streamlit.io/develop/api-reference/widgets/st.file_uploader
 
 if uploaded_file is not None:
     # Read in the image, convert to 8-bit greyscale.
@@ -55,4 +55,4 @@ def fs_dither(img, nc):
 if uploaded_file is not None:
     nc = 2  # two colours: black and white
     dim = fs_dither(img, nc)
-    st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
+    st.image(dim, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
