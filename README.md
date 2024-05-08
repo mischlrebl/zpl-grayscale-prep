@@ -11,6 +11,9 @@ with the preprocessing below, an only black pixeled image is created which can t
 ## example
 ![example picture](example.png)
 
+## result printed out
+![result picture](result.png)
+
 ## code
 code base from [scipython](https://scipython.com/blog/floyd-steinberg-dithering/)
 1. read in an image (grayscale or color)
