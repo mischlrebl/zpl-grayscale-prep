@@ -54,5 +54,5 @@ def fs_dither(img, nc):
 
 
 nc = 2  # two colours: black and white
-dim = fs_dither(img, nc)
+# dim = fs_dither(img, nc)
 st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
