@@ -8,18 +8,14 @@ for that, [Dither](https://en.wikipedia.org/wiki/Dither) is a method, especially
 import procedures on [Labelary Online ZPL Viewer](https://labelary.com/viewer.html) and [ZPL Designer](https://zpldesigner.com/) results in full black areas only commonly.  
 with the preprocessing below, an only black pixeled image is created which can then be imported one to one. 
 
-## example
+## example (input - output)
 ![example picture](example.png)
 
 ## result printed out
 ![result picture](result.png)
 
-## code
-code base from [scipython](https://scipython.com/blog/floyd-steinberg-dithering/)
-1. read in an image (grayscale or color)
-2. convert it to grayscale
-3. dither it to black and white only
-4. save it as image-2
+## live usage
+test and use it now directly on [Streamlit](https://zpl-grayscale-prep-v5xzgu2ddg8mqrgwrtazxq.streamlit.app/)
 
 ## zpl
 add it to a zpl-code:
@@ -33,6 +29,13 @@ the source image already has to have the right size:
 |printer| 200 dpi | 300 dpi |
 |-| --- | --- |
 |1 mm| 8 px | 12 px |
+
+## code
+code base from [scipython](https://scipython.com/blog/floyd-steinberg-dithering/)
+1. read in an image (grayscale or color)
+2. convert it to grayscale
+3. dither it to black and white only
+4. save it as image-2
 
 ## setup on Windows
 from scratch:
