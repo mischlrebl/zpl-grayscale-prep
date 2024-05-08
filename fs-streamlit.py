@@ -5,13 +5,13 @@ import streamlit as st
 from PIL import Image  # Pillow: https://pillow.readthedocs.io/en/stable/index.html
 from os import path
 
-uploaded_file = st.file_uploader("Choose a file3")
+uploaded_file = st.file_uploader("Choose a file")
 
 if uploaded_file is not None:
-  # Read in the image, convert to 8-bit greyscale.
-  img = Image.open(uploaded_file)
-  img = img.convert('L')  # https://pillow.readthedocs.io/en/stable/handbook/concepts.html#concept-modes
-  width, height = img.size
+    # Read in the image, convert to 8-bit greyscale.
+    img = Image.open(uploaded_file)
+    img = img.convert('L')  # https://pillow.readthedocs.io/en/stable/handbook/concepts.html#concept-modes
+    width, height = img.size
 
 def get_new_val(old_val, nc):
     """
@@ -53,6 +53,6 @@ def fs_dither(img, nc):
     return Image.fromarray(carr)
 
 if uploaded_file is not None:
-  nc = 2  # two colours: black and white
-  dim = fs_dither(img, nc)
-  st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
+    nc = 2  # two colours: black and white
+    dim = fs_dither(img, nc)
+    st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
