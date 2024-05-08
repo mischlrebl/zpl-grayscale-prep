@@ -52,7 +52,7 @@ def fs_dither(img, nc):
     carr = np.array(arr/np.max(arr, axis=(0,1)) * 255, dtype=np.uint8)
     return Image.fromarray(carr)
 
-
-nc = 2  # two colours: black and white
-# dim = fs_dither(img, nc)
-st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
+if uploaded_file is not None:
+  nc = 2  # two colours: black and white
+  # dim = fs_dither(img, nc)
+  st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
