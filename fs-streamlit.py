@@ -9,7 +9,7 @@ uploaded_file = st.file_uploader("Choose a file")
 
 if uploaded_file is not None:
   # Read in the image, convert to 8-bit greyscale.
-  img = Image.open(uploaded_file)  # https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html
+  img = Image.open(uploaded_file)
   img = img.convert('L')  # https://pillow.readthedocs.io/en/stable/handbook/concepts.html#concept-modes
   width, height = img.size
 
@@ -55,4 +55,4 @@ def fs_dither(img, nc):
 
 nc = 2  # two colours: black and white
 dim = fs_dither(img, nc)
-dim.save(path.join(folder, file.replace(".", "-{}.")).format(nc))  ## add a -2 to the file name
+st.image(img, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
