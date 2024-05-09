@@ -15,7 +15,7 @@ with the preprocessing below, an only black pixeled image is created which can t
 ![result picture](result.png)
 
 ## live usage
-test and use it now directly on [Streamlit](https://zpl-grayscale-prep-v5xzgu2ddg8mqrgwrtazxq.streamlit.app/)
+test and use it now directly on [Streamlit](https://zpl-grayscale-prep-v5xzgu2ddg8mqrgwrtazxq.streamlit.app/), runs 'fs-streamlit.py'
 
 ## zpl
 add it to a zpl-code:
