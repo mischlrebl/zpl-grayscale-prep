@@ -3,9 +3,12 @@
 import numpy as np
 import streamlit as st
 from PIL import Image  # Pillow: https://pillow.readthedocs.io/en/stable/index.html
+from PIL import ImageEnhance  # https://medium.com/@revelyuution/image-manipulation-in-python-using-pillow-62eb68aa8f93
 from os import path
 
-uploaded_file = st.file_uploader("Choose a file") # https://docs.streamlit.io/develop/api-reference/widgets/st.file_uploader
+uploaded_file = st.file_uploader("Choose a file as input", type=['png', 'jpg', 'jpeg', 'gif', 'bmp']) # https://docs.streamlit.io/develop/api-reference/widgets/st.file_uploader
+
+brightness_factor = st.slider("Brightness enhancement factor", 0.0, 2.0, 1.0, help="< 1: darkens the image | 1.0: no change | > 1: brightens it")
 
 if uploaded_file is not None:
     # Read in the image, convert to 8-bit greyscale.
@@ -53,6 +56,12 @@ def fs_dither(img, nc):
     return Image.fromarray(carr)
 
 if uploaded_file is not None:
+    enhancer = ImageEnhance.Brightness(img)
+    brightened_image = enhancer.enhance(brightness_factor)
+
     nc = 2  # two colours: black and white
-    dim = fs_dither(img, nc)
+    dim = fs_dither(brightened_image, nc)
+
     st.image(dim, caption='output')  # https://discuss.streamlit.io/t/need-help-displaying-images/54490
+    # st.image(brightened_image, caption='brighten')
+    # st.image(img, caption='original')
