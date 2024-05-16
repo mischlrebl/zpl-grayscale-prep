@@ -2,7 +2,7 @@
 prepares an image to import them into zpl
 
 ## preface
-zpl does not offer a possibility to print in grayscale, this can only be reached by controlling the density of *black* pixels.  
+zpl does not offer a possibility to print in grayscale, this can only be reached by controlling the density of **black** pixels.  
 for that, [Dither](https://en.wikipedia.org/wiki/Dither) is a method, especially the [Flyod-Steinberg algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering).  
 
 import procedures on [Labelary Online ZPL Viewer](https://labelary.com/viewer.html) and [ZPL Designer](https://zpldesigner.com/) results in full black areas only commonly.  
@@ -27,15 +27,15 @@ the section will be placed with the ^FO (Field Origin ) command automatically an
 
 ### resolution
 the source image already has to have the right size:
-|printer| 200 dpi | 300 dpi |
-|-| --- | --- |
-|1 mm| 8 px | 12 px |
+|printer type:| 200 dpi | 300 dpi |
+| ----:| --- | --- |
+|1 mm on the label:| 8 px | 12 px |
 
 ## code
 code base from [scipython](https://scipython.com/blog/floyd-steinberg-dithering/)
 1. read in an image (grayscale or color)
 2. convert it to grayscale
-3. dither it to black and white only
+3. dither it to black and white only (number of colours, nc = 2)
 4. save it as image-2
 
 ## setup on Windows
