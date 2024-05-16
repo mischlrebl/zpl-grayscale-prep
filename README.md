@@ -2,21 +2,21 @@
 prepares an image to import them into zpl
 
 ## preface
-zpl does not offer a possibility to print in grayscale, this can only be reached by controlling the density of **black** pixels.  
+ZPL, the [Zebra Programming Language](https://en.wikipedia.org/wiki/Zebra_Programming_Language) does not offer a possibility to print in grayscale, this can only be reached by controlling the density and arrangement of **black** pixels.  
 for that, [Dither](https://en.wikipedia.org/wiki/Dither) is a method, especially the [Flyod-Steinberg algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering).  
 
 import procedures on [Labelary Online ZPL Viewer](https://labelary.com/viewer.html) and [ZPL Designer](https://zpldesigner.com/) results in full black areas only commonly.  
 with the preprocessing below, an only black pixeled image is created which can then be imported one to one. 
 
 ## examples (input - output)
-![example picture](example.png)
-![david picture](david.png)
+![example picture](images/example.png)
+![david picture](images/david.png)
 
 ## result printed out
-![result picture](result.png)
+![result picture](images/result.png)
 
 ## live usage
-test and use it now directly on [Streamlit](https://zpl-grayscale-prep-v5xzgu2ddg8mqrgwrtazxq.streamlit.app/), runs 'fs-streamlit.py'
+test and use it now directly on [Streamlit](https://zpl-grayscale-prep-v5xzgu2ddg8mqrgwrtazxq.streamlit.app/), runs 'fs-streamlit.py' with the addition of a brightness slider to optimize the output
 
 ## zpl
 add it to a zpl-code:
@@ -42,7 +42,7 @@ code base from [scipython](https://scipython.com/blog/floyd-steinberg-dithering/
 from scratch:
 1. install [PyCharm Community Edition ](https://www.jetbrains.com/pycharm/download/?section=windows)
 2. add the necessary [packages](packages.png) according to this [article](https://www.geeksforgeeks.org/how-to-install-numpy-in-pycharm/)
-![packages picture](packages.png)
+![packages picture](images/packages.png)
 3. create a project
 4. define folder and file in the code
 5. run 'fs.py'
