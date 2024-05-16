@@ -2,14 +2,15 @@
 prepares an image to import them into zpl
 
 ## preface
-zpl does not offer a possibility to print in grayscale, this can only be reached by controlling the density of black pixels.  
+zpl does not offer a possibility to print in grayscale, this can only be reached by controlling the density of *black* pixels.  
 for that, [Dither](https://en.wikipedia.org/wiki/Dither) is a method, especially the [Flyod-Steinberg algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering).  
 
 import procedures on [Labelary Online ZPL Viewer](https://labelary.com/viewer.html) and [ZPL Designer](https://zpldesigner.com/) results in full black areas only commonly.  
 with the preprocessing below, an only black pixeled image is created which can then be imported one to one. 
 
-## example (input - output)
+## examples (input - output)
 ![example picture](example.png)
+![david picture](david.png)
 
 ## result printed out
 ![result picture](result.png)
