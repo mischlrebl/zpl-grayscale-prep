@@ -12,8 +12,9 @@ with the preprocessing below, an only black pixeled image is created which can t
 ![example picture](images/example.png)
 ![david picture](images/david.png)
 
-## result printed out
+## results printed out
 ![result picture](images/result.png)
+![david picture](images/result2.png)
 
 ## live usage
 test and use it now directly on [Streamlit](https://zpl-grayscale-prep-v5xzgu2ddg8mqrgwrtazxq.streamlit.app/), runs 'fs-streamlit.py' with the addition of a brightness slider to optimize the output
@@ -23,7 +24,7 @@ add it to a zpl-code:
   - Labelary: Add image
   - ZPL Designer: Insert > Image
 
-the section will be placed with the ^FO (Field Origin ) command automatically and can be adjusted
+the section will be placed with the ^FO (Field Origin ) command automatically that can be positioned
 
 ### resolution
 the source image already has to have the right size:
